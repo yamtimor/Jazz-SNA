@@ -30,5 +30,9 @@ class Player:
         return f"info about {self.name}"
 
 if __name__ == "__main__":
-    player_test = Player('John Coltrane', 'Saxophone', [1,2,3], [4,5])
-    print(player_test)
+    # player_test = Player('John Coltrane', 'Saxophone', [1,2,3], [4,5])
+    # print(player_test)
+    players_list = extract_players()
+    for player in players_list:
+        p = Player(player['player'], player['instrument'],'test','test')
+        print(p)
