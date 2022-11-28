@@ -18,6 +18,7 @@ def extract_players():
 
 class Player:
 
+
     def __init__(self, name, instrument, discography, sideman):
         self.name = name
         self.instrument = instrument
