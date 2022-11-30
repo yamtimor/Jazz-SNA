@@ -6,6 +6,7 @@ from player import Player
 bebop_players = wikipedia.page("List of bebop musicians").content
 
 def extract_players():
+
     players = []
 
     for element in filter(lambda x: bool(x) and not x.startswith("=="), bebop_players.split("\n")[1:]):
@@ -16,4 +17,19 @@ def extract_players():
             }
         )
     return players
+
+def extract_discography(player):
+
+    page = wikipedia.page(player).content
+    discography_with_titles = list(filter(lambda x: bool(x), page.split("== Discography ==")[1].split("\n")))
+    discography_with_titles = discography_with_titles[:discography_with_titles.index("== References ==")]
+
+    leader = discography_with_titles[:discography_with_titles.index("=== As sideman ===")][1:]
+    sideman = discography_with_titles[discography_with_titles.index("=== As sideman ===")+1:]
+
+    discography = {
+        "leader": leader,
+        "sideman": sideman
+     }
+    return discography
 
