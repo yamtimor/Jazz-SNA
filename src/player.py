@@ -9,3 +9,4 @@ class Player:
     # temporary:
     def __str__(self):
         return f"info about {self.name}"
+

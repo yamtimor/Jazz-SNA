@@ -12,4 +12,5 @@ def main():
     pprint(extract_discography(players_list[0]['player']))
 
 if __name__ == "__main__":
+
     main()
