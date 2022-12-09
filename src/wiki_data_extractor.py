@@ -10,6 +10,7 @@ def extract_players():
     players = []
 
     for element in filter(lambda x: bool(x) and not x.startswith("=="), bebop_players.split("\n")[1:]):
+
         # players.append(
         #     {
         #         "player": element.split("-")[0][:-1],
