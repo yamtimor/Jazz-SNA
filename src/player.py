@@ -10,4 +10,4 @@ class Player:
         self.as_sideman = as_sideman
 
     def __str__(self):
-        return f"info about {self.name}"
+        return f"info about {self.name}, a {self.instrument} player"
