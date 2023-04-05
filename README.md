@@ -9,3 +9,4 @@ The data for this project was sourced from Wikipedia. We used the Python Wikiped
 ### Additional Resources
 
 - The Wikipedia page from which data was sourced: https://en.wikipedia.org/wiki/List_of_bebop_musicians
+---> change the source of the project to: https://www.jazzdisco.org/
